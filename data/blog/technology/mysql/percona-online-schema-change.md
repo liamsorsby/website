@@ -1,6 +1,7 @@
 ---
 title: Percona XtraDB - pt-online-schema-change notes / finds
 date: '2023-01-05'
+lastmod: '2023-02-28'
 tags: ['technology', 'mysql', 'percona', 'sql']
 draft: false
 summary: 'Notes on usage and findings when using pt-online-schema-change'
@@ -108,6 +109,20 @@ pt-online-schema-change --alter "ADD COLUMN firstName varchar(255)" D=test,t=per
 ```
 
 This can take a matter of seconds on small databases, but it can take up to a few hours if your datasets are quite large.
+
+#### Update (28th Feb 2023)
+
+I found that if you're converting an existing table. The code below will change the tables collation but _NOT_ the existing columns
+
+```bash
+pt-online-schema-change --alter "CHARACTER SET utf8mb4, COLLATE utf8mb4_bin;" D=test,t=persons --execute --print
+```
+
+If you're wanting to modify an existing table and upgrade the columns you'll want.
+
+```bash
+pt-online-schema-change --alter "CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_bin;" D=test,t=persons --execute --print
+```
 
 #### References
 
