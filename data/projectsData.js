@@ -1,4 +1,17 @@
 const projectsData = [
+  {
+    title: 'Website',
+    description: 'Source code for this website.',
+    imgSrc: '/static/images/avatar.jpg',
+    href: 'https://github.com/liamsorsby/website',
+  },
+  {
+    title: 'Infrastructure As Code (IoC)',
+    description: 'Source code for this website.',
+    imgSrc: '/static/images/terraformio-icon.svg',
+    href: 'https://github.com/liamsorsby/infrastructure',
+  },
+
   // {
   //   title: 'A Search Engine',
   //   description: `What if you could look up any information in the world? Webpages, images, videos
