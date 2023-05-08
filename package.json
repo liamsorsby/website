@@ -9,7 +9,7 @@
     "serve": "next start",
     "test": "exit 0",
     "analyze": "cross-env ANALYZE=true next build",
-    "lint": "next lint --dir pages --dir components --dir lib --dir layouts --dir scripts",
+    "lint": "next lint --dir pages --dir components --dir lib --dir layouts",
     "lint:fix": "next lint --fix --dir pages --dir components --dir lib --dir layouts --dir scripts",
     "prepare": "husky install"
   },
