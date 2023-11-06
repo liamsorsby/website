@@ -1,0 +1,13 @@
+{
+  "url": "https://sorsby.co/static/hackerone/test.yaml",
+  "urls": [
+    {
+      "url": "https://sorsby.co/static/hackerone/test.yaml",
+      "name": "Foo"
+    },
+    {
+      "url": "https://sorsby.co/static/hackerone/test.yaml",
+      "name": "Bar"
+    }
+  ]
+}
