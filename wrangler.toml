@@ -1,0 +1,10 @@
+name = "sorsby-blog"
+main = "src/worker.js"
+compatibility_date = "2024-05-01"
+preview_urls = true
+
+# Static files (favicons, images) are served by Cloudflare directly.
+[assets]
+directory = "./public"
+
+[previews]
